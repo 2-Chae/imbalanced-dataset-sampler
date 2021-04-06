@@ -40,7 +40,7 @@ In this repo, we implement an easy-to-use PyTorch sampler `ImbalancedDatasetSamp
 For a simple start install the package via one of following ways:
 ```bash
 python setup.py install
-pip install .
+python -m pip install -e .
 ```
 
 
