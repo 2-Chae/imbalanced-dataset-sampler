@@ -50,7 +50,8 @@ class ImbalancedDatasetSampler(torch.utils.data.sampler.Sampler):
         elif isinstance(dataset, torch.utils.data.Subset):
             return dataset.dataset.imgs[idx][1]
         else:
-            raise NotImplementedError
+            return dataset.labels[idx]
+            #raise NotImplementedError
                 
     def __iter__(self):
         return (self.indices[i] for i in torch.multinomial(
